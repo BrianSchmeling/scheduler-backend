@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 mongoose.Promise = Promise;
 
-let mongoURI = "mongodb://localhost/Scheduler";
+let mongoURI = process.env.DB_URL;
 
 mongoose
   .connect(mongoURI, { useNewUrlParser: true })
