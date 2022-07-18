@@ -7,7 +7,7 @@ module.exports = {
     });
   },
   show: (req, res) => {
-    Employee.findOne(req.params.name).then((Sched) => {
+    Employee.findOne(name: req.params.name).then((Sched) => {
       res.json(Sched);
     });
   },
@@ -24,7 +24,7 @@ module.exports = {
     );
   },
   delete: (req, res) => {
-    Employee.findOneAndDelete(req.params.name).then((Sched) => {
+    Employee.findOneAndDelete(name: req.params.name).then((Sched) => {
       res.json(Sched);
     });
   },
