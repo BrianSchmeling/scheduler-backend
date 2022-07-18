@@ -24,7 +24,7 @@ module.exports = {
     );
   },
   delete: (req, res) => {
-    Employee.findByIdAndDelete(req.params.id).then((Sched) => {
+    Employee.findOneAndDelete(req.params.name).then((Sched) => {
       res.json(Sched);
     });
   },
