@@ -6,6 +6,6 @@ const EmployeeSchema = new Schema({
   id: String,
 });
 
-const Schedule = mongoose.model("ScheduleSchema", ScheduleSchema);
+const Employee = mongoose.model("EmployeeSchema", EmployeeSchema);
 
-module.exports = Schedule;
+module.exports = Employee;
