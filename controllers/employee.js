@@ -1,4 +1,4 @@
-const Employee = require("../models/employee");
+const Employee = require("../models/employee.js");
 
 module.exports = {
   index: (req, res) => {
@@ -24,7 +24,7 @@ module.exports = {
     );
   },
   delete: (req, res) => {
-    Employee.findByIdAndDelete(req.params.id).then((Sched) => {
+    Employee.findOneAndDelete(req.params.id).then((Sched) => {
       res.json(Sched);
     });
   },
