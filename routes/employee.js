@@ -4,9 +4,9 @@ const router = express.Router();
 const employeeController = require("../controllers/employee");
 
 router.get("/", employeeController.index);
-router.get("/:id", employeeController.show);
+router.get("/:name", employeeController.show);
 router.post("/add", employeeController.create);
 router.put("/:id", employeeController.edit);
-router.delete("/:id", employeeController.delete);
+router.delete("/:name", employeeController.delete);
 
 module.exports = router;
