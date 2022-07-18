@@ -1,4 +1,5 @@
 const Schedule = require("../models/schedule");
+const Employee = require("../models/employee");
 
 Schedule.deleteMany({}).then(() => {
   // console.log("Seeding Schedule");
@@ -33,7 +34,32 @@ Schedule.deleteMany({}).then(() => {
     },
   ]).then((sched) => {
     console.log(sched);
-    res.json(sched);
-    process.exit();
+    // res.json(sched);
+    // process.exit();
+  });
+});
+
+Employee.deleteMany({}).then(() => {
+  Employee.create([
+    {
+      name: "Brian",
+      id: "1",
+    },
+    {
+      name: "Perfect and Beautiful Emma",
+      id: "2",
+    },
+    {
+      name: "Someone else",
+      id: "3",
+    },
+    {
+      name: "This guy",
+      id: "4",
+    },
+  ]).then((emp) => {
+    console.log(emp);
+    // res.json(emp);
+    // process.exit();
   });
 });
