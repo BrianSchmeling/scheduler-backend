@@ -7,7 +7,7 @@ module.exports = {
     });
   },
   show: (req, res) => {
-    Employee.findById(req.params.id).then((Sched) => {
+    Employee.findOne(req.params.name).then((Sched) => {
       res.json(Sched);
     });
   },
