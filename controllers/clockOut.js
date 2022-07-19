@@ -17,7 +17,7 @@ module.exports = {
     });
   },
   edit: (req, res) => {
-    ClockOut.findByIdAndUpdate({ name: req.params.name }, req.body, {
+    ClockOut.findOneAndUpdate({ name: req.params.name }, req.body, {
       new: true,
     }).then((clock) => {
       res.json(clock);

@@ -17,7 +17,7 @@ module.exports = {
     });
   },
   edit: (req, res) => {
-    ClockIn.findByIdAndUpdate({ name: req.params.name }, req.body, {
+    ClockIn.findOneAndUpdate({ name: req.params.name }, req.body, {
       new: true,
     }).then((clock) => {
       res.json(clock);
